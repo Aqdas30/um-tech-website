@@ -1,0 +1,773 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UM Technical Services</title>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/navbars/navbar-1/assets/css/navbar-1.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/bsb-btn-size/bsb-btn-size.css">
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/margin/margin.css">
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/padding/padding.css">
+
+    <style>
+        :root {
+            --hero-background-image: url('{% static "images/blueboy.jpg" %}');
+
+        }
+        
+    </style>
+</head>
+<body> 
+    <!-- Alert with Contact Info -->
+    <div class="alert d-flex align-items-center mb-0" role="alert" style="background-color: #131842;">
+        <div class="container-fluid">
+            <div class="row w-100">
+                <div class="col-md-6 col-12 d-flex justify-content-center justify-content-md-start mb-2 mb-md-0">
+                    <div class="contact-info text-center text-md-start text-white">
+                        <div class="mb-1">
+                            <i class="bi bi-telephone-fill"></i> Call: +971 4 527 522704, +971 4 524 131272
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-md-6 col-12 d-flex justify-content-center justify-content-md-end">
+                    <div class="mt-2 text-white text-end">
+                        <i class="bi bi-envelope-fill"></i> Umtechnicalservices@gmail.com
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <nav class="navbar navbar-expand-md bg-light bsb-navbar bsb-navbar-hover bsb-navbar-caret" id="home">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="{% static 'images/logo5.png' %}" alt="UM Technical Services Logo">
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        </li>
+                       
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#!" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu border-0 shadow bsb-zoomIn" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="#services">Plumbing</a></li>
+                                <li><a class="dropdown-item" href="#services">Painting</a></li>
+                                <li><a class="dropdown-item" href="#services">AC Service</a></li>
+                                <li><a class="dropdown-item" href="#services">Tiling</a></li>
+                                <li><a class="dropdown-item" href="#services">Carpentary</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav> 
+
+
+
+    <div class="hero-section">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-md-8 col-lg-6">
+                    <div class="hero-content text-center text-md-start">
+                        <h2>YOUR TRUSTED HANDYMAN</h2>
+                        <h1 id="animated-service">CARPENTRY</h1>
+                        <p>From quick fixes to home improvements, we've got you covered.</p>
+                        <a href="#contact" class="btn btn-primary">BOOK SERVICE NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- welcome section -->
+    <div class="container-fluid welcome-section py-5 px-3 my-5">
+        <div class="container">
+            <div class="row">
+                <!-- Welcome Content -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h1 class="mb-4">WELCOME TO UM TECHNICAL SERVICES</h1>
+                    <p class="mb-4 text-dark" style="color: black;">
+                        UM Technical Services is a leading handyman service provider. We have been serving our customers with quality and affordable solutions for all their home maintenance needs since [Year]. Whether you need plumbing, electrical, painting, or any other service, we have the right team of experts to handle it. We are available 24/7 and offer free quotes and consultations. Contact us today and let us take care of your home.
+                    </p>
+                    
+                    <div class="d-flex align-items-center">
+                        <button class="btn me-3 discover-button" id="discover-services-button">DISCOVER OUR SERVICES</button>
+                    </div>
+                </div>
+                <!-- Features Section -->
+                <div class="col-lg-6">
+                    <div class="d-flex flex-nowrap">
+                        <div class="feature-box flex-fill text-center p-4" style="background-color: #f8f9fa;">
+                            <div class="service-number">1</div>
+                            <h3>Repair</h3>
+                            <p>Efficient and reliable repair services for any issue you face.</p>
+                        </div>
+                        <div class="feature-box sndnum flex-fill text-center p-4" style="background-color: #131842; color: white;">
+                            <div class="service-number" style="color: white;">2</div>
+                            <h3>Improve</h3>
+                            <p style="color: white; ">Expert solutions to enhance your home’s functionality.</p>
+                        </div>
+                        <div class="feature-box flex-fill text-center p-4" style="background-color: #f8f9fa;">
+                            <div class="service-number">3</div>
+                            <h3>Maintain</h3>
+                            <p>Thorough  maintenance to keep your home in top condition.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- welcome section end -->
+
+   <!-- About 8 - Bootstrap Brain Component -->
+
+   
+   <section class="py-3 py-md-5 py-xl-8 " >
+    <div class="container" id="about">
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                <h2 class="mb-4 display-5 text-center">About Us</h2>
+                <p class="text-secondary mb-5 text-center lead fs-4">We take pride in offering comprehensive handyman services with a commitment to quality and customer satisfaction.</p>
+                <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row gy-4 gy-lg-0 align-items-lg-center">
+            <div class="col-12 col-lg-6">
+                <img class="img-fluid rounded border border-dark" loading="lazy" src="{% static 'images/about-img.jpg' %}" alt="About Us">
+            </div>
+            <div class="col-12 col-lg-6 col-xxl-6">
+                <div class="row justify-content-lg-end justify-content-xxl-around">
+                    <div class="col-12 col-lg-11 col-xxl-10">
+                        <div class="card border-0 mb-4">
+                            <div class="card-body p-0">
+                                <h4 class="card-title mb-3">Services We Offer</h4>
+                                <ul class="list-unstyled m-0 p-0 d-sm-flex flex-sm-wrap">
+                                    <li class="py-1 d-flex align-items-center gap-2 col-sm-6">
+                                        <span class="text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
+                                                <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486z"/>
+                                            </svg>
+                                        </span>
+                                        <span>Plumbing Services</span>
+                                    </li>
+                                    <li class="py-1 d-flex align-items-center gap-2 col-sm-6">
+                                        <span class="text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
+                                                <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486z"/>
+                                            </svg>
+                                        </span>
+                                        <span>Electrical Services</span>
+                                    </li>
+                                    <li class="py-1 d-flex align-items-center gap-2 col-sm-6">
+                                        <span class="text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
+                                                <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486z"/>
+                                            </svg>
+                                        </span>
+                                        <span>Carpentry Services</span>
+                                    </li>
+                                    <li class="py-1 d-flex align-items-center gap-2 col-sm-6">
+                                        <span class="text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
+                                                <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486z"/>
+                                            </svg>
+                                        </span>
+                                        <span>Painting Services</span>
+                                    </li>
+                                    <li class="py-1 d-flex align-items-center gap-2 col-sm-6">
+                                        <span class="text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
+                                                <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486z"/>
+                                            </svg>
+                                        </span>
+                                        <span>AC Repair Services</span>
+                                    </li>
+                                    <li class="py-1 d-flex align-items-center gap-2 col-sm-6">
+                                        <span class="text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
+                                                <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486z"/>
+                                            </svg>
+                                        </span>
+                                        <span>Plumbing Repairs</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card border-0 mb-4 mb-xxl-5">
+                            <div class="card-body p-0">
+                                <h4 class="card-title mb-3">Our Commitment to Excellence</h4>
+                                <ul class="list-unstyled m-0 p-0 d-sm-flex flex-sm-wrap">
+                                    <li class="py-1 d-flex align-items-center gap-2 col-sm-6">
+                                        <span class="text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
+                                                <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486z"/>
+                                            </svg>
+                                        </span>
+                                        <span>Expert Technicians</span>
+                                    </li>
+                                    <li class="py-1 d-flex align-items-center gap-2 col-sm-6">
+                                        <span class="text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
+                                                <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486z"/>
+                                            </svg>
+                                        </span>
+                                        <span>Transparent Pricing</span>
+                                    </li>
+                                    <li class="py-1 d-flex align-items-center gap-2 col-sm-6">
+                                        <span class="text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
+                                                <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486z"/>
+                                            </svg>
+                                        </span>
+                                        <span>Timely Service</span>
+                                    </li>
+                                    <li class="py-1 d-flex align-items-center gap-2 col-sm-6">
+                                        <span class="text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
+                                                <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486z"/>
+                                            </svg>
+                                        </span>
+                                        <span>Guaranteed Satisfaction</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="service_section layout_padding py-5 px-3 my-5">
+        <div class="container " id="services">
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                    <h2 class="mb-4 display-5 text-center">Our Services</h2>
+                    <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+                </div>
+            </div>
+          <div class="row" id="services-container">
+            <!-- Services will be loaded here dynamically -->
+          </div>
+          <div class="btn-box">
+            <a href="#" id="view-more" style="text-decoration: none;">
+              View More
+            </a>
+           
+          </div>
+        </div>
+      </section>
+
+      <!-- why choose us section -->
+    <section class="why-choose-us active py-5 px-3 my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="finix-text">
+                        <h6>Reliable and Professional</h6>
+                        <h2>Why Choose UM Technical Services?</h2>
+                        <p>At UM Technical Services, we take pride in delivering top-notch handyman services. Our experienced professionals are committed to ensuring your satisfaction with every project we undertake.</p>
+                        <img src="https://raw.githubusercontent.com/farazc60/Project-Images/main/why_choose_us.png" alt="Why Choose Us">
+                        <div class="ct-btn">
+                            <a href="#" class=""><i class="fas fa-play-circle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="feature-box mt-4">
+                                <div class="feature-box-content text-center">
+                                    <div class="fbc-btn">
+                                        <i class="fas fa-tools"></i>
+                                    </div>
+                                    <h3>Quality Workmanship</h3>
+                                    <p>We ensure that every job is completed with the highest quality standards.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="feature-box">
+                                <div class="feature-box-content text-center">
+                                    <div class="fbc-btn">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <h3>On-Time Service</h3>
+                                    <p>Your time is valuable, and we respect that. We always aim to be on time.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="feature-box">
+                                <div class="feature-box-content text-center">
+                                    <div class="fbc-btn">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <h3>Guaranteed Satisfaction</h3>
+                                    <p>Your satisfaction is our top priority, and we stand by our work.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="feature-box active-feature">
+                                <div class="feature-box-content text-center">
+                                    <div class="fbc-btn">
+                                        <i class="fas fa-thumbs-up"></i>
+                                    </div>
+                                    <h3>Affordable Pricing</h3>
+                                    <p>We offer competitive pricing without compromising on quality.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mt-5 py-5 px-3 my-5">
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                    <h2 class="mb-4 display-5 text-center">Gallery</h2>
+                    <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+                </div>
+            </div>
+        <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="gallery-item">
+                                <img src="{% static 'images/Ac service.jpg' %}" alt="AC Installation">
+                                <div class="gallery-caption">
+                                    <h5>AC Installation</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="gallery-item">
+                                <img src="{% static 'images/tiling.jpg' %}" alt="Commercial Services">
+                                <div class="gallery-caption">
+                                    <h5>Tiling Services</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="gallery-item">
+                                <img src="{% static 'images/painting.jpg' %}" alt="Residential Services">
+                                <div class="gallery-caption">
+                                    <h5>Painting Services</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="gallery-item">
+                                <img src="{% static 'images/electrical.jpg' %}" alt="Electrical">
+                                <div class="gallery-caption">
+                                    <h5>Electrical</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="gallery-item">
+                                <img src="{% static 'images/plumbing.jpg' %}" alt="Plumbing">
+                                <div class="gallery-caption">
+                                    <h5>Plumbing</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="gallery-item">
+                                <img src="{% static 'images/carpentary.jpg' %}" alt="Carpentry">
+                                <div class="gallery-caption">
+                                    <h5>Carpentry</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+ <!-- FAQ Section -->
+<section class="faq-section py-5 px-3 my-5">
+    <div class="container" id="faq">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                    <h2 class="mb-4 display-5 text-center">Frequently Asked Questions</h2>
+                    <p class="text-secondary mb-5 text-center lead fs-4">Find the answers to the most common questions about our handyman services.
+                    </p>
+                    <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+                </div>
+            </div>
+        </div>
+     
+  
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <h6 class="mb-3 text-dark"><i class="fas fa-tools text-primary pe-2"></i> What services do you offer?</h6>
+          <p>
+            We provide a wide range of handyman services, including painting, carpentry, electrical work, plumbing, and more. Our team is skilled and ready to help with any home improvement or repair needs.
+          </p>
+        </div>
+  
+        <div class="col-md-6 col-lg-4 mb-4">
+          <h6 class="mb-3 text-dark"><i class="fas fa-calendar-alt text-primary pe-2"></i> How do I book a service?</h6>
+          <p>
+            Booking is simple! You can contact us directly via phone or email, or use our online booking system on the website. We’ll confirm your appointment and send a professional to your location at your convenience.
+          </p>
+        </div>
+  
+        <div class="col-md-6 col-lg-4 mb-4">
+          <h6 class="mb-3 text-dark"><i class="fas fa-money-check-alt text-primary pe-2"></i> What are your service charges?</h6>
+          <p>
+            Our service charges vary depending on the type of work and the duration required. We offer transparent pricing with no hidden fees. Contact us for a detailed quote based on your specific needs.
+          </p>
+        </div>
+  
+        <div class="col-md-6 col-lg-4 mb-4">
+          <h6 class="mb-3 text-dark"><i class="fas fa-shield-alt text-primary pe-2"></i> Are your services insured?</h6>
+          <p>
+            Yes, all our services are fully insured to give you peace of mind. We prioritize safety and quality in every job we undertake.
+          </p>
+        </div>
+  
+        <div class="col-md-6 col-lg-4 mb-4">
+          <h6 class="mb-3 text-dark"><i class="fas fa-wrench text-primary pe-2"></i> Do you offer emergency services?</h6>
+          <p>
+            Absolutely! We understand that some issues need immediate attention. Our team is available for emergency handyman services to address urgent repairs.
+          </p>
+        </div>
+  
+        <div class="col-md-6 col-lg-4 mb-4">
+          <h6 class="mb-3 text-dark"><i class="fas fa-star text-primary pe-2"></i> Why choose UM Technical Services?</h6>
+          <p>
+            We have a proven track record of delivering high-quality handyman services with a focus on customer satisfaction. Our skilled professionals are dedicated to ensuring your home is well-maintained and functional.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!--Section: FAQ-->
+
+  {% comment %} contact us  {% endcomment %}
+  <div class="container-fluid  px-5  mx-auto" style="max-width: 1200px;" id="contact">
+    <div class="row justify-content-md-center">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 text-center mx-auto">
+            <h2 class="mb-4 display-5">Contact Us</h2>
+            <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <!-- Left Section -->
+        <div class="col-md-6 bg-dark-purple text-light p-5">
+            <h6 class="text-cyan mb-3">GET A SERVICE QUOTE</h6>
+            <h2 class="mb-4">HOW IT WORKS</h2>
+            <p class="text-white mb-5">Please contact our team or complete the form below. A representative will contact you shortly.</p>
+            
+            <div class="mb-4">
+                <h5><i class="bi bi-gear text-cyan"></i> Raise Your Request</h5>
+                <p class="text-white">If we're the right fit, you'll choose the handyman service that works best for your needs.</p>
+            </div>
+            
+            <div class="mb-4">
+                <h5><i class="bi bi-chat text-cyan"></i> Get Estimate</h5>
+                <p class="text-white">We'll discuss your requirements and provide an estimate tailored to your request.</p>
+            </div>
+            
+            <div class="mb-4">
+                <h5><i class="bi bi-bullseye text-cyan"></i> Schedule Visit</h5>
+                <p class="text-white">We'll schedule a convenient time for our experts to assist you.</p>
+            </div>
+        </div>
+        
+        <!-- Right Section (Form) -->
+
+        <div class="col-md-6 p-5">
+            <form id="contactForm" method="post" class="bg-light p-4 rounded">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name *</label>
+                    {{ form.name }}
+                </div>
+                
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number *</label>
+                    {{ form.phone_number }}
+                </div>
+                
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email *</label>
+                    {{ form.email }}
+                </div>
+                
+                <div class="mb-3">
+                    <label for="service_type" class="form-label">Type Of Service You Need? *</label>
+                    {{ form.service_type }}
+                </div>
+                
+                <div class="mb-3">
+                    <label for="message" class="form-label">Briefly explain your issue here...</label>
+                    {{ form.message }}
+                </div>
+                
+                <button type="submit" class="btn btn-dark-blue" style="background-color: #131842; color: white;">BOOK</button>
+            </form>
+            
+            <div id="successMessage" class="alert alert-success mt-3 border border-success" style="display: none;"></div>
+        </div>
+    
+    </div>
+</div>
+<br>
+
+
+
+<footer class="footer">
+    <div class="social-section">
+        <div>Get connected with us on social networks:</div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-google"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+    <div class="footer-content">
+        <div class="footer-column">
+            <h6>UM Technical Service</h6>
+            <hr>
+            <p>                        UM Technical Services offers reliable handyman solutions including plumbing, electrical work, carpentry, and more. We are committed to providing quality and affordable services.
+            </p>
+        </div>
+        <div class="footer-column">
+            <h6>Services</h6>
+            <hr>
+            <p><a href="#services" class="text-light">Plumbing</a></p>
+            <p><a href="#services" class="text-light">Electrical</a></p>
+            <p><a href="#services" class="text-light">Carpentry</a></p>
+            <p><a href="#services" class="text-light">Painting</a></p>
+        </div>
+        <div class="footer-column">
+            <h6>Useful Links</h6>
+                    <hr>
+                    <p><a href="#about" class="text-light">About Us</a></p>
+                    <p><a href="#contact" class="text-light">Contact Us</a></p>
+                    <p><a href="#faq" class="text-light">FAQs</a></p>
+        </div>
+        <div class="footer-column">
+            <h6>Contact</h6>
+            <hr>
+            <p><i class="fas fa-home mr-3"></i> Bayan business center DIP 1st Dubai</p>
+            <p><i class="fas fa-envelope mr-3"></i>Umtechnicalservices@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> +971 4 527 522704  </p>
+            <p><i class="fas fa-print mr-3"></i>  +971 4 524 131272</p>
+        </div>
+    </div>
+    <div class="copyright">
+        © 2024 UM Technical Services. All rights reserved. <a href="https://www.umtechnicalservices.ae" class="text-light">Visit our website</a>
+    </div>
+</footer> 
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+
+const services = ["CARPENTRY", "PLUMBING", "PAINTING", "TILING", "ELECTRICAL"];
+let currentIndex = 0;
+
+function updateServiceText() {
+    const serviceElement = document.getElementById('animated-service');
+    serviceElement.textContent = services[currentIndex];
+    currentIndex = (currentIndex + 1) % services.length;
+}
+
+setInterval(updateServiceText, 2000); // Update service every 2 seconds
+document.addEventListener('DOMContentLoaded', function() {
+            var carousel = new bootstrap.Carousel(document.getElementById('galleryCarousel'), {
+                interval: 5000,  // Set to 5 seconds
+                pause: 'hover',  // Pause on hover
+                wrap: true,      // Continuous loop
+                keyboard: false  // Disable keyboard controls
+            });
+
+            // Restart carousel when it's been paused
+            document.getElementById('galleryCarousel').addEventListener('mouseleave', function() {
+                carousel.cycle();
+            });
+
+            // Ensure smooth transition between slides
+            carousel._element.addEventListener('slide.bs.carousel', function() {
+                clearTimeout(carousel._timeout);
+                carousel._timeout = setTimeout(function() {
+                    carousel.next();
+                }, carousel._config.interval);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        console.log("Document loaded");
+        
+        // Function to load preview services
+        function loadPreviewServices() {
+            fetch('/services/preview/')
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Preview services data:", data);
+                    const servicesContainer = document.getElementById('services-container');
+                    servicesContainer.innerHTML = ''; // Clear any existing content
+                    data.forEach(service => {
+                        const serviceBox = document.createElement('div');
+                        serviceBox.classList.add('col-sm-6', 'col-md-4', 'mx-auto');
+                        serviceBox.innerHTML = `
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="${service.image}" alt="${service.title}">
+                                </div>
+                                <div class="detail-box">
+                                    <h5>${service.title}</h5>
+                                    <p>${service.description}</p>
+                                </div>
+                            </div>
+                        `;
+                        servicesContainer.appendChild(serviceBox);
+                    });
+                });
+        }
+
+        // Function to load all services
+        function loadAllServices() {
+            fetch('/services/')
+                .then(response => response.json())
+                .then(data => {
+                    console.log("All services data:", data);
+                    const servicesContainer = document.getElementById('services-container');
+                    servicesContainer.innerHTML = ''; // Clear existing services
+                    data.forEach(service => {
+                        const serviceBox = document.createElement('div');
+                        serviceBox.classList.add('col-sm-6', 'col-md-4', 'mx-auto');
+                        serviceBox.innerHTML = `
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="${service.image}" alt="${service.title}">
+                                </div>
+                                <div class="detail-box">
+                                    <h5>${service.title}</h5>
+                                    <p>${service.description}</p>
+                                </div>
+                            </div>
+                        `;
+                        servicesContainer.appendChild(serviceBox);
+                    });
+                });
+        }
+
+        // Initially load preview services
+        loadPreviewServices();
+
+        const viewMoreButton = document.getElementById('view-more');
+        let isViewingMore = false;
+
+        viewMoreButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            
+            if (isViewingMore) {
+                // Load preview services and change button text to "View More"
+                loadPreviewServices();
+                viewMoreButton.textContent = 'View More';
+            } else {
+                // Load all services and change button text to "View Less"
+                loadAllServices();
+                viewMoreButton.textContent = 'View Less';
+            }
+            isViewingMore = !isViewingMore; // Toggle the state
+        });
+    });
+
+    $(document).ready(function() {
+        $('#contactForm').on('submit', function(e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'POST',
+                url: '{% url "index" %}',
+                data: $(this).serialize(),
+                dataType: 'json',
+                success: function(response) {
+                    if (response.status === 'success') {
+                        $('#successMessage').text(response.message).show();
+                        $('#contactForm')[0].reset(); // Reset the form fields
+                        $('html, body').animate({
+                            scrollTop: $('#successMessage').offset().top - 100
+                        }, 200); // Scroll to the message
+                    } else {
+                        alert('There was an error. Please try again.');
+                    }
+                },
+                error: function() {
+                    alert('There was an error. Please try again.');
+                }
+            });
+        });
+    });
+  
+        </script>
+</body>
+</html> 
