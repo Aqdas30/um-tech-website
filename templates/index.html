@@ -290,7 +290,6 @@
         </div>
     </div>
 </section>
-
 <section class="service_section layout_padding py-5 px-3 my-5" style="background-color: #f2f2f2;">
     <div class="container" id="services">
         <div class="row justify-content-md-center">
@@ -300,13 +299,107 @@
             </div>
         </div>
         <div class="row" id="services-container">
-            <!-- Services will be loaded here dynamically -->
+            <div class="col-sm-6 col-md-4 mx-auto">
+                <div class="box">
+                    <div class="img-box">
+                        <img src="{% static 'images/painter.png' %}" alt="Painting Services">
+                    </div>
+                    <div class="detail-box">
+                        <h5>Painting Services</h5>
+                        <p>Interior and exterior painting, wall painting, texture painting, wallpaper installation, and more.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 mx-auto">
+                <div class="box">
+                    <div class="img-box">
+                        <img src="{% static 'images/carpentary.png' %}" alt="Carpentry Service">
+                    </div>
+                    <div class="detail-box">
+                        <h5>Carpentry Service</h5>
+                        <p>Repairing and assembling wardrobes, cabinets, tables, counters, kids' beds, pergolas, and beds.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 mx-auto">
+                <div class="box">
+                    <div class="img-box">
+                        <img src="{% static 'images/gypsum.png' %}" alt="Gypsum Partition">
+                    </div>
+                    <div class="detail-box">
+                        <h5>Gypsum Partition</h5>
+                        <p>Protect your business from malware, hackers, viruses, and the most common security threats.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 mx-auto">
+                <div class="box">
+                    <div class="img-box">
+                        <img src="{% static 'images/electrician.png' %}" alt="Electrician">
+                    </div>
+                    <div class="detail-box">
+                        <h5>Electrician</h5>
+                        <p>Light installation, socket replacement, residential & commercial electrical services.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 mx-auto">
+                <div class="box">
+                    <div class="img-box">
+                        <img src="{% static 'images/ac.png' %}" alt="AC Service">
+                    </div>
+                    <div class="detail-box">
+                        <h5>AC Service</h5>
+                        <p>AC Maintenance, AC Service, AC Repair, AC Cleaning, HVAC Service, Air Conditioning Maintenance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 mx-auto">
+                <div class="box">
+                    <div class="img-box">
+                        <img src="{% static 'images/handy.png' %}" alt="Handyman">
+                    </div>
+                    <div class="detail-box">
+                        <h5>Handyman</h5>
+                        <p>We offer a range of handyman services to help you tackle all of your home improvement needs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 mx-auto">
+                <div class="box">
+                    <div class="img-box">
+                        <img src="{% static 'images/plumb.png' %}" alt="Plumbing">
+                    </div>
+                    <div class="detail-box">
+                        <h5>Plumbing</h5>
+                        <p>We are equipped to handle all types of plumbing issues, including pipe leaks, clogged drains, faulty faucets, etc.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 mx-auto">
+                <div class="box">
+                    <div class="img-box">
+                        <img src="{% static 'images/tile.png' %}" alt="Tiling Work">
+                    </div>
+                    <div class="detail-box">
+                        <h5>Tiling Work</h5>
+                        <p>We are experts in tile installation, repair, and interlock services, including marble and wooden flooring.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 mx-auto">
+                <div class="box">
+                    <div class="img-box">
+                        <img src="{% static 'images/heater.png' %}" alt="Water Heater Repair">
+                    </div>
+                    <div class="detail-box">
+                        <h5>Water Heater Repair</h5>
+                        <p>Water Heater Repair, Water Heater Installation, 50 ltrs - 300 ltrs, Emergency Services.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="btn-box">
-            <a href="#" id="view-more" style="text-decoration: none;">
-                View More
-            </a>
-        </div>
+       
     </div>
 </section>
 
@@ -649,15 +742,7 @@
     <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
-        function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
-        }
-        </script>
+        
 const services = ["CARPENTRY", "PLUMBING", "PAINTING", "TILING", "ELECTRICAL"];
 let currentIndex = 0;
 
@@ -690,112 +775,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        document.addEventListener('DOMContentLoaded', function() {
-        console.log("Document loaded");
-        
-        // Function to load preview services
-        function loadPreviewServices() {
-            fetch('/services/preview/')
-                .then(response => response.json())
-                .then(data => {
-                    console.log("Preview services data:", data);
-                    const servicesContainer = document.getElementById('services-container');
-                    servicesContainer.innerHTML = ''; // Clear any existing content
-                    data.forEach(service => {
-                        const serviceBox = document.createElement('div');
-                        serviceBox.classList.add('col-sm-6', 'col-md-4', 'mx-auto');
-                        serviceBox.innerHTML = `
-                            <div class="box">
-                                <div class="img-box">
-                                    <img src="${service.image}" alt="${service.title}">
-                                </div>
-                                <div class="detail-box">
-                                    <h5>${service.title}</h5>
-                                    <p>${service.description}</p>
-                                </div>
-                            </div>
-                        `;
-                        servicesContainer.appendChild(serviceBox);
-                    });
-                });
-        }
-
-        // Function to load all services
-        function loadAllServices() {
-            fetch('/services/')
-                .then(response => response.json())
-                .then(data => {
-                    console.log("All services data:", data);
-                    const servicesContainer = document.getElementById('services-container');
-                    servicesContainer.innerHTML = ''; // Clear existing services
-                    data.forEach(service => {
-                        const serviceBox = document.createElement('div');
-                        serviceBox.classList.add('col-sm-6', 'col-md-4', 'mx-auto');
-                        serviceBox.innerHTML = `
-                            <div class="box">
-                                <div class="img-box">
-                                    <img src="${service.image}" alt="${service.title}">
-                                </div>
-                                <div class="detail-box">
-                                    <h5>${service.title}</h5>
-                                    <p>${service.description}</p>
-                                </div>
-                            </div>
-                        `;
-                        servicesContainer.appendChild(serviceBox);
-                    });
-                });
-        }
-
-        // Initially load preview services
-        loadPreviewServices();
-
-        const viewMoreButton = document.getElementById('view-more');
-        let isViewingMore = false;
-
-        viewMoreButton.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default link behavior
-            
-            if (isViewingMore) {
-                // Load preview services and change button text to "View More"
-                loadPreviewServices();
-                viewMoreButton.textContent = 'View More';
-            } else {
-                // Load all services and change button text to "View Less"
-                loadAllServices();
-                viewMoreButton.textContent = 'View Less';
-            }
-            isViewingMore = !isViewingMore; // Toggle the state
-        });
-    });
-
-    $(document).ready(function() {
-        $('#contactForm').on('submit', function(e) {
-            e.preventDefault();
-            $.ajax({
-                type: 'POST',
-                url: '{% url "index" %}',
-                data: $(this).serialize(),
-                dataType: 'json',
-                success: function(response) {
-                    if (response.status === 'success') {
-                        $('#successMessage').text(response.message).show();
-                        $('#contactForm')[0].reset(); // Reset the form fields
-                        $('html, body').animate({
-                            scrollTop: $('#successMessage').offset().top - 100
-                        }, 200); // Scroll to the message
-                    } else {
-                        alert('There was an error. Please try again.');
-                    }
-                },
-                error: function() {
-                    alert('There was an error. Please try again.');
-                }
-            });
-        });
-    });
-   
-        </script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>

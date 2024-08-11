@@ -5,6 +5,9 @@
 /* Alert bar styles */
 
 
+.more-services {
+    display: none;
+}
 
 .alert {
     background-color: white !important; /* Set alert bar background to white */
