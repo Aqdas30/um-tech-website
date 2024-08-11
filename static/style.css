@@ -79,12 +79,7 @@
   }
   
   /* Ensure the sidebar and overlay work as expected */
-  .sidebar,
-  .overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-  }
+  
   
   .sidebar {
     left: -100%;
@@ -126,7 +121,40 @@
       z-index: auto;
     }
   }
-  
+
+
+
+
+  .close-nav-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        bottom: 0;
+        width: 80%;
+        max-width: 300px;
+        padding-top: 3.5rem;
+        background-color: #131842;
+        transition: 0.3s;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-collapse.show {
+        left: 0;
+    }
+}
+
   .main-heading {
     position: relative;
     z-index: 100;

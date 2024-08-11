@@ -6,12 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UM Technical Services</title>
-    <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
-    integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK"
-    crossorigin="anonymous"
-  />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -156,94 +152,49 @@
             </div>
         </div>
     </div>
-{% comment %}     
-    <nav class="navbar navbar-expand-md bg-light bsb-navbar bsb-navbar-hover bsb-navbar-caret" id="home">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="{% static 'images/logo5.png' %}" alt="UM Technical Services Logo">
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'images/logo5.png' %}" alt="Logo" style="height: 70px;">
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list navbar-toggler-icon-white" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                </svg>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#services">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+    
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <button type="button" class="btn-close btn-close-white d-lg-none close-nav-btn" aria-label="Close navigation"></button>
+                
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link px-3 px-lg-2 active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 px-lg-2" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 px-lg-2" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 px-lg-2" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link px-3 px-lg-2 dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="#services">Painting</a></li>
+                            <li><a class="dropdown-item" href="#services">AC Service</a></li>
+                            <li><a class="dropdown-item" href="#services">Carpentry</a></li>
+                            <li><a class="dropdown-item" href="#services">Plumbing</a></li>
+                            <li><a class="dropdown-item" href="#services">Tiling</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
-     {% endcomment %}
-
-
-    <!-- navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navigation">
-    <div class="container-fluid">
-      <!-- Logo -->
-      <a class="navbar-brand" href="#">
-        <img src="{% static 'images/logo5.png' %}" alt="Logo" style="height: 70px;"> <!-- Adjust the height as needed -->
-      </a>
-      
-      <!-- Toggler button for mobile view -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <!-- Navbar links -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link px-3 px-lg-2 active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-3 px-lg-2" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-3 px-lg-2" href="#contact">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-3 px-lg-2" href="#faq">FAQ</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link px-3 px-lg-2 dropdown-toggle" href="#services" id="servicesDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-              Services
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-              <li><a class="dropdown-item" href="#services">Painting</a></li>
-              <li><a class="dropdown-item" href="#services">Ac Service</a></li>
-              <li><a class="dropdown-item" href="#services">Carpentary</a></li>
-              <li><a class="dropdown-item" href="#services">Plumbing</a></li>
-              <li><a class="dropdown-item" href="#services">Tiling</a></li>
-
-
-              <!-- Add more services as needed -->
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- navbar -->
-
-  
     <div class="hero-section">
         <div class="container">
             <div class="row justify-content-end">
@@ -319,7 +270,7 @@
         </div>
     </div>
 </div> -->
-<div style="background-color: #f2f2f2; padding: 20px 0;">
+<section><div style="background-color: #f2f2f2; padding: 20px 0;">
     <div class="container my-4">
         <div class="row justify-content-md-center">
             <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
@@ -381,6 +332,7 @@
            
     </div>
 </div>
+</section>
 
    
    <section class="py-3 py-md-5 py-xl-8 " >
@@ -897,55 +849,53 @@
 </div>
 <br>
 
-
-
-<footer class="footer">
-    <div class="social-section">
-        <div>Get connected with us on social networks:</div>
+<footer class="footer" style="background-color: #131842; color: white; padding: 20px;">
+    <div class="social-section" style="color: white; margin-bottom: 20px;">
+        <div style="margin-bottom: 10px;">Get connected with us on social networks:</div>
         <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-google"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#" style="color: white; margin-right: 10px;"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" style="color: white; margin-right: 10px;"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="color: white; margin-right: 10px;"><i class="fab fa-google"></i></a>
+            <a href="#" style="color: white; margin-right: 10px;"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="color: white; margin-right: 10px;"><i class="fab fa-linkedin"></i></a>
+            <a href="#" style="color: white;"><i class="fab fa-github"></i></a>
         </div>
     </div>
     <div class="footer-content">
-        <div class="footer-column">
-            <h6>UM Technical Service</h6>
-            <hr>
-            <p>                        UM Technical Services offers reliable handyman solutions including plumbing, electrical work, carpentry, and more. We are committed to providing quality and affordable services.
-            </p>
+        <div class="footer-column" style="margin-bottom: 20px;">
+            <h6 style="color: white; margin-bottom: 10px;">UM Technical Service</h6>
+            <hr style="border-color: white; margin-bottom: 10px;">
+            <p style="color: white;">UM Technical Services offers reliable handyman solutions including plumbing, electrical work, carpentry, and more. We are committed to providing quality and affordable services.</p>
         </div>
-        <div class="footer-column">
-            <h6>Services</h6>
-            <hr>
-            <p><a href="#services" class="text-light">Plumbing</a></p>
-            <p><a href="#services" class="text-light">Electrical</a></p>
-            <p><a href="#services" class="text-light">Carpentry</a></p>
-            <p><a href="#services" class="text-light">Painting</a></p>
+        <div class="footer-column" style="margin-bottom: 20px;">
+            <h6 style="color: white; margin-bottom: 10px;">Services</h6>
+            <hr style="border-color: white; margin-bottom: 10px;">
+            <p><a href="#services" style="color: white; text-decoration: none;">Plumbing</a></p>
+            <p><a href="#services" style="color: white; text-decoration: none;">Electrical</a></p>
+            <p><a href="#services" style="color: white; text-decoration: none;">Carpentry</a></p>
+            <p><a href="#services" style="color: white; text-decoration: none;">Painting</a></p>
         </div>
-        <div class="footer-column">
-            <h6>Useful Links</h6>
-                    <hr>
-                    <p><a href="#about" class="text-light">About Us</a></p>
-                    <p><a href="#contact" class="text-light">Contact Us</a></p>
-                    <p><a href="#faq" class="text-light">FAQs</a></p>
+        <div class="footer-column" style="margin-bottom: 20px;">
+            <h6 style="color: white; margin-bottom: 10px;">Useful Links</h6>
+            <hr style="border-color: white; margin-bottom: 10px;">
+            <p><a href="#about" style="color: white; text-decoration: none;">About Us</a></p>
+            <p><a href="#contact" style="color: white; text-decoration: none;">Contact Us</a></p>
+            <p><a href="#faq" style="color: white; text-decoration: none;">FAQs</a></p>
         </div>
-        <div class="footer-column">
-            <h6>Contact</h6>
-            <hr>
-            <p><i class="fas fa-home mr-3"></i> Bayan business center DIP 1st Dubai</p>
-            <p><i class="fas fa-envelope mr-3"></i>Umtechnicalservices@gmail.com</p>
-            <p><i class="fas fa-phone mr-3"></i> +971 4 527 522704  </p>
-            <p><i class="fas fa-print mr-3"></i>  +971 4 524 131272</p>
+        <div class="footer-column" style="margin-bottom: 20px;">
+            <h6 style="color: white; margin-bottom: 10px;">Contact</h6>
+            <hr style="border-color: white; margin-bottom: 10px;">
+            <p style="color: white;"><i class="fas fa-home mr-3"></i> Bayan business center DIP 1st Dubai</p>
+            <p style="color: white;"><i class="fas fa-envelope mr-3"></i>Umtechnicalservices@gmail.com</p>
+            <p style="color: white;"><i class="fas fa-phone mr-3"></i> +971 4 527 522704</p>
+            <p style="color: white;"><i class="fas fa-print mr-3"></i> +971 4 524 131272</p>
         </div>
     </div>
-    <div class="copyright">
-        © 2024 UM Technical Services. All rights reserved. <a href="https://www.umtechnicalservices.ae" class="text-light">Visit our website</a>
+    <div class="copyright" style="text-align: center; margin-top: 20px; color: white;">
+        © 2024 UM Technical Services. All rights reserved. <a href="https://www.umtechnicalservices.ae" style="color: white; text-decoration: none;">Visit our website</a>
     </div>
-</footer> 
+</footer>
+
 
 
  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -955,7 +905,8 @@
     <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
-        
+    
+
 const services = ["CARPENTRY", "PLUMBING", "PAINTING", "TILING", "ELECTRICAL"];
 let currentIndex = 0;
 
@@ -989,11 +940,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
 </script>
-<script
-src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"
-integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD"
-crossorigin="anonymous"
-></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
+
 
 <link rel="stylesheet" href="{% static 'style.css' %}">
 
@@ -1004,6 +952,215 @@ crossorigin="anonymous"
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>/*!
+    * swiped-events.js - v@version@
+    * Pure JavaScript swipe events
+    * https://github.com/john-doherty/swiped-events
+    * @inspiration https://stackoverflow.com/questions/16348031/disable-scrolling-when-touch-moving-certain-element
+    * @author John Doherty <www.johndoherty.info>
+    * @license MIT
+    */
+   (function (window, document) {
+   
+       'use strict';
+   
+       // patch CustomEvent to allow constructor creation (IE/Chrome)
+       if (typeof window.CustomEvent !== 'function') {
+   
+           window.CustomEvent = function (event, params) {
+   
+               params = params || { bubbles: false, cancelable: false, detail: undefined };
+   
+               var evt = document.createEvent('CustomEvent');
+               evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+               return evt;
+           };
+   
+           window.CustomEvent.prototype = window.Event.prototype;
+       }
+   
+       document.addEventListener('touchstart', handleTouchStart, false);
+       document.addEventListener('touchmove', handleTouchMove, false);
+       document.addEventListener('touchend', handleTouchEnd, false);
+   
+       var xDown = null;
+       var yDown = null;
+       var xDiff = null;
+       var yDiff = null;
+       var timeDown = null;
+       var startEl = null;
+   
+       /**
+        * Fires swiped event if swipe detected on touchend
+        * @param {object} e - browser event object
+        * @returns {void}
+        */
+       function handleTouchEnd(e) {
+   
+           // if the user released on a different target, cancel!
+           if (startEl !== e.target) return;
+   
+           var swipeThreshold = parseInt(getNearestAttribute(startEl, 'data-swipe-threshold', '20'), 10); // default 20px
+           var swipeTimeout = parseInt(getNearestAttribute(startEl, 'data-swipe-timeout', '500'), 10);    // default 500ms
+           var timeDiff = Date.now() - timeDown;
+           var eventType = '';
+           var changedTouches = e.changedTouches || e.touches || [];
+   
+           if (Math.abs(xDiff) > Math.abs(yDiff)) { // most significant
+               if (Math.abs(xDiff) > swipeThreshold && timeDiff < swipeTimeout) {
+                   if (xDiff > 0) {
+                       eventType = 'swiped-left';
+                   }
+                   else {
+                       eventType = 'swiped-right';
+                   }
+               }
+           }
+           else if (Math.abs(yDiff) > swipeThreshold && timeDiff < swipeTimeout) {
+               if (yDiff > 0) {
+                   eventType = 'swiped-up';
+               }
+               else {
+                   eventType = 'swiped-down';
+               }
+           }
+   
+           if (eventType !== '') {
+   
+               var eventData = {
+                   dir: eventType.replace(/swiped-/, ''),
+                   xStart: parseInt(xDown, 10),
+                   xEnd: parseInt((changedTouches[0] || {}).clientX || -1, 10),
+                   yStart: parseInt(yDown, 10),
+                   yEnd: parseInt((changedTouches[0] || {}).clientY || -1, 10)
+               };
+   
+               // fire `swiped` event event on the element that started the swipe
+               startEl.dispatchEvent(new CustomEvent('swiped', { bubbles: true, cancelable: true, detail: eventData }));
+   
+               // fire `swiped-dir` event on the element that started the swipe
+               startEl.dispatchEvent(new CustomEvent(eventType, { bubbles: true, cancelable: true, detail: eventData }));
+           }
+   
+           // reset values
+           xDown = null;
+           yDown = null;
+           timeDown = null;
+       }
+   
+       /**
+        * Records current location on touchstart event
+        * @param {object} e - browser event object
+        * @returns {void}
+        */
+       function handleTouchStart(e) {
+   
+           // if the element has data-swipe-ignore="true" we stop listening for swipe events
+           if (e.target.getAttribute('data-swipe-ignore') === 'true') return;
+   
+           startEl = e.target;
+   
+           timeDown = Date.now();
+           xDown = e.touches[0].clientX;
+           yDown = e.touches[0].clientY;
+           xDiff = 0;
+           yDiff = 0;
+       }
+   
+       /**
+        * Records location diff in px on touchmove event
+        * @param {object} e - browser event object
+        * @returns {void}
+        */
+       function handleTouchMove(e) {
+   
+           if (!xDown || !yDown) return;
+   
+           var xUp = e.touches[0].clientX;
+           var yUp = e.touches[0].clientY;
+   
+           xDiff = xDown - xUp;
+           yDiff = yDown - yUp;
+       }
+   
+       /**
+        * Gets attribute off HTML element or nearest parent
+        * @param {object} el - HTML element to retrieve attribute from
+        * @param {string} attributeName - name of the attribute
+        * @param {any} defaultValue - default value to return if no match found
+        * @returns {any} attribute value or defaultValue
+        */
+       function getNearestAttribute(el, attributeName, defaultValue) {
+   
+           // walk up the dom tree looking for data-action and data-trigger
+           while (el && el !== document.documentElement) {
+   
+               var attributeValue = el.getAttribute(attributeName);
+   
+               if (attributeValue) {
+                   return attributeValue;
+               }
+   
+               el = el.parentNode;
+           }
+   
+           return defaultValue;
+       }
+   
+   }(window, document));
+   </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mainNavigation = document.querySelector(".main-navigation");
+        const navbarCollapse = document.getElementById("navbarNav");
+        const toggler = mainNavigation.querySelector(".navbar-toggler");
+        const closeBtn = mainNavigation.querySelector(".close-nav-btn");
+        const dropdownToggles = mainNavigation.querySelectorAll('.dropdown-toggle');
+    
+        function openSideNav() {
+            navbarCollapse.classList.add("show");
+        }
+    
+        function closeSideNav() {
+            navbarCollapse.classList.remove("show");
+        }
+    
+        toggler.addEventListener("click", openSideNav);
+        closeBtn.addEventListener("click", closeSideNav);
+    
+        // Close nav when clicking outside
+        document.addEventListener('click', (event) => {
+            const isClickInside = mainNavigation.contains(event.target);
+            if (!isClickInside && navbarCollapse.classList.contains('show')) {
+                closeSideNav();
+            }
+        });
+    
+        // Close nav when clicking on a link
+        const navLinks = mainNavigation.querySelectorAll('.nav-link:not(.dropdown-toggle)');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 992) {
+                    closeSideNav();
+                }
+            });
+        });
+    
+        // Toggle dropdown on click (for mobile)
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', (event) => {
+                if (window.innerWidth < 992) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    const dropdownMenu = toggle.nextElementSibling;
+                    dropdownMenu.classList.toggle('show');
+                }
+            });
+        });
+    });
+    </script>
 </body>
 </html> 
