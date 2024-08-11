@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UM Technical Services</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/navbars/navbar-1/assets/css/navbar-1.css">
     <link rel="stylesheet" href="{% static 'style.css' %}">
@@ -18,10 +21,13 @@
 <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/bsb-btn-size/bsb-btn-size.css">
 <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/margin/margin.css">
 <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/padding/padding.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <style>
         :root {
             --hero-background-image: url('{% static "images/blueboy.jpg" %}');
+            
 
         }
         
@@ -31,16 +37,16 @@
     <!-- Alert with Contact Info -->
     <div class="alert d-flex align-items-center mb-0" role="alert" style="background-color: #131842;">
         <div class="container-fluid">
-            <div class="row w-100">
-                <div class="col-md-6 col-12 d-flex justify-content-center justify-content-md-start mb-2 mb-md-0">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 d-flex justify-content-center justify-content-lg-start mb-2 mb-lg-0">
                     <div class="contact-info text-center text-md-start text-white">
-                        <div class="mb-1">
-                            <i class="bi bi-telephone-fill"></i> Call: +971 4 527 522704, +971 4 524 131272
+                        <div class="mb-1 text-nowrap">
+                            <i class="bi bi-telephone-fill"></i> Call: <span class="phone-numbers">+971 4 527 522704, +971 4 524 131272</span>
                         </div>
-                    </div> 
+                    </div>
                 </div>
-                <div class="col-md-6 col-12 d-flex justify-content-center justify-content-md-end">
-                    <div class="mt-2 text-white text-end">
+                <div class="col-lg-6 col-md-12 d-flex justify-content-center justify-content-lg-end">
+                    <div class="mt-2 text-white text-center text-md-end">
                         <i class="bi bi-envelope-fill"></i> Umtechnicalservices@gmail.com
                     </div>
                 </div>
@@ -48,15 +54,14 @@
         </div>
     </div>
     
-
     <nav class="navbar navbar-expand-md bg-light bsb-navbar bsb-navbar-hover bsb-navbar-caret" id="home">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="{% static 'images/logo5.png' %}" alt="UM Technical Services Logo">
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5.5 0 0 1-.5-.5z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list navbar-toggler-icon-white" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                 </svg>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -69,16 +74,16 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#home">Home</a>
                         </li>
-                       
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#!" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-                            <ul class="dropdown-menu border-0 shadow bsb-zoomIn" aria-labelledby="servicesDropdown">
+                            <a class="nav-link dropdown-toggle" href="#services" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                                 <li><a class="dropdown-item" href="#services">Plumbing</a></li>
                                 <li><a class="dropdown-item" href="#services">Painting</a></li>
                                 <li><a class="dropdown-item" href="#services">AC Service</a></li>
                                 <li><a class="dropdown-item" href="#services">Tiling</a></li>
                                 <li><a class="dropdown-item" href="#services">Carpentary</a></li>
-
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -91,26 +96,23 @@
                 </div>
             </div>
         </div>
-    </nav> 
-
-
-
+    </nav>
+    
     <div class="hero-section">
         <div class="container">
             <div class="row justify-content-end">
                 <div class="col-md-8 col-lg-6">
                     <div class="hero-content text-center text-md-start">
                         <h2>YOUR TRUSTED HANDYMAN</h2>
-                        <h1 id="animated-service">CARPENTRY</h1>
+                        <h1 id="animated-service" style="color:#131842">CARPENTRY</h1>
                         <p>From quick fixes to home improvements, we've got you covered.</p>
-                        <a href="#contact" class="btn btn-primary">BOOK SERVICE NOW</a>
+                        <a href="#contact" class="btn btn-primary" style="background-color:#131842">BOOK SERVICE NOW</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- welcome section -->
     <div class="container-fluid welcome-section py-5 px-3 my-5">
         <div class="container">
             <div class="row">
@@ -125,33 +127,54 @@
                         <button class="btn me-3 discover-button" id="discover-services-button">DISCOVER OUR SERVICES</button>
                     </div>
                 </div>
-                <!-- Features Section -->
-                <div class="col-lg-6">
-                    <div class="d-flex flex-nowrap">
-                        <div class="feature-box flex-fill text-center p-4" style="background-color: #f8f9fa;">
-                            <div class="service-number">1</div>
-                            <h3>Repair</h3>
-                            <p>Efficient and reliable repair services for any issue you face.</p>
-                        </div>
-                        <div class="feature-box sndnum flex-fill text-center p-4" style="background-color: #131842; color: white;">
-                            <div class="service-number" style="color: white;">2</div>
-                            <h3>Improve</h3>
-                            <p style="color: white; ">Expert solutions to enhance your home’s functionality.</p>
-                        </div>
-                        <div class="feature-box flex-fill text-center p-4" style="background-color: #f8f9fa;">
-                            <div class="service-number">3</div>
-                            <h3>Maintain</h3>
-                            <p>Thorough  maintenance to keep your home in top condition.</p>
-                        </div>
-                    </div>
+                
+                <!-- Image on the Right -->
+                <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                    <img src="{% static 'images/tools.jpg' %}" alt="Welcome Image" class="img-fluid" style="max-width: 100%; height: auto; max-height: 400px;">
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- welcome section end -->
+<!-- Welcome Section End -->
 
-   <!-- About 8 - Bootstrap Brain Component -->
+   <!-- Features Section -->
+<!-- Features Section -->
+<div style="background-color: #f2f2f2; padding: 20px 0;">
+    <div class="container my-4">
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                <h2 class="mb-4 display-5 text-center">Features</h2>
+                <hr class="w-50 mx-auto mb-5 mb-xl-9" style="border-color: #131842; border-width: 3px;">
+            </div>
+        </div>
+        <div class="row justify-content-center mx-lg-5 mx-md-4 mx-sm-3 mx-2">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center mb-4">
+                <div class="feature-box text-center p-4" style="background-color: #f8f9fa; padding-left: 20px; padding-right: 20px;">
+                    <div class="service-number">1</div>
+                    <h3>Repair</h3>
+                    <p>Efficient and reliable repair services for any issue you face.</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center mb-4">
+                <div class="feature-box text-center p-4" style="background-color: #131842; color: white; padding-left: 20px; padding-right: 20px;">
+                    <div class="service-number" style="color: white;">2</div>
+                    <h3>Improve</h3>
+                    <p style="color: white;">Expert solutions to enhance your home's functionality.</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center mb-4">
+                <div class="feature-box text-center p-4" style="background-color: #f8f9fa; padding-left: 20px; padding-right: 20px;">
+                    <div class="service-number">3</div>
+                    <h3>Maintain</h3>
+                    <p>Thorough maintenance to keep your home in top condition.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
    
    <section class="py-3 py-md-5 py-xl-8 " >
@@ -160,7 +183,7 @@
             <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
                 <h2 class="mb-4 display-5 text-center">About Us</h2>
                 <p class="text-secondary mb-5 text-center lead fs-4">We take pride in offering comprehensive handyman services with a commitment to quality and customer satisfaction.</p>
-                <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+                <hr class="w-50 mx-auto mb-5 mb-xl-9" style="border-color: #131842; border-width: 3px;">
             </div>
         </div>
     </div>
@@ -275,28 +298,28 @@
     </div>
 </section>
 
-    <section class="service_section layout_padding py-5 px-3 my-5">
-        <div class="container " id="services">
-            <div class="row justify-content-md-center">
-                <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-                    <h2 class="mb-4 display-5 text-center">Our Services</h2>
-                    <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
-                </div>
+<section class="service_section layout_padding py-5 px-3 my-5" style="background-color: #f2f2f2;">
+    <div class="container" id="services">
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                <h2 class="mb-4 display-5 text-center">Our Services</h2>
+                <hr class="w-50 mx-auto mb-5 mb-xl-9" style="border-color: #131842; border-width: 3px;">
             </div>
-          <div class="row" id="services-container">
-            <!-- Services will be loaded here dynamically -->
-          </div>
-          <div class="btn-box">
-            <a href="#" id="view-more" style="text-decoration: none;">
-              View More
-            </a>
-           
-          </div>
         </div>
-      </section>
+        <div class="row" id="services-container">
+            <!-- Services will be loaded here dynamically -->
+        </div>
+        <div class="btn-box">
+            <a href="#" id="view-more" style="text-decoration: none;">
+                View More
+            </a>
+        </div>
+    </div>
+</section>
+
 
       <!-- why choose us section -->
-    <section class="why-choose-us active py-5 px-3 my-5">
+      <section class="why-choose-us active py-5 px-3 my-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -312,9 +335,9 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="row">
-                        <div class="col-lg-6">
-                            <div class="feature-box mt-4">
-                                <div class="feature-box-content text-center">
+                        <div class="col-lg-6 mb-4">
+                            <div class="choose-box">
+                                <div class="choose-box-content text-center">
                                     <div class="fbc-btn">
                                         <i class="fas fa-tools"></i>
                                     </div>
@@ -323,9 +346,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="feature-box">
-                                <div class="feature-box-content text-center">
+                        <div class="col-lg-6 mb-4">
+                            <div class="choose-box">
+                                <div class="choose-box-content text-center">
                                     <div class="fbc-btn">
                                         <i class="fas fa-clock"></i>
                                     </div>
@@ -334,9 +357,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="feature-box">
-                                <div class="feature-box-content text-center">
+                        <div class="col-lg-6 mb-4">
+                            <div class="choose-box">
+                                <div class="choose-box-content text-center">
                                     <div class="fbc-btn">
                                         <i class="fas fa-shield-alt"></i>
                                     </div>
@@ -345,9 +368,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="feature-box active-feature">
-                                <div class="feature-box-content text-center">
+                        <br>
+                        <div class="col-lg-6 mb-4">
+                            <div class="choose-box active-feature">
+                                <div class="choose-box-content text-center">
                                     <div class="fbc-btn">
                                         <i class="fas fa-thumbs-up"></i>
                                     </div>
@@ -361,14 +385,14 @@
             </div>
         </div>
     </section>
-
-    <div class="container mt-5 py-5 px-3 my-5">
-            <div class="row justify-content-md-center">
-                <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-                    <h2 class="mb-4 display-5 text-center">Gallery</h2>
-                    <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
-                </div>
+    
+    <div class="container mt-5 py-5 px-3 my-5" style="background-color: #f2f2f2;">
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                <h2 class="mb-4 display-5 text-center">Gallery</h2>
+                <hr class="w-50 mx-auto mb-5 mb-xl-9" style="border-color: #131842; border-width: 3px;">
             </div>
+        </div>
         <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -438,7 +462,7 @@
             </button>
         </div>
     </div>
-
+    
 
  <!-- FAQ Section -->
 <section class="faq-section py-5 px-3 my-5">
@@ -449,7 +473,7 @@
                     <h2 class="mb-4 display-5 text-center">Frequently Asked Questions</h2>
                     <p class="text-secondary mb-5 text-center lead fs-4">Find the answers to the most common questions about our handyman services.
                     </p>
-                    <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+                    <hr class="w-50 mx-auto mb-5 mb-xl-9" style="border-color: #131842; border-width: 3px;">
                 </div>
             </div>
         </div>
@@ -508,7 +532,7 @@
     <div class="row justify-content-md-center">
         <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 text-center mx-auto">
             <h2 class="mb-4 display-5">Contact Us</h2>
-            <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+            <hr class="w-50 mx-auto mb-5 mb-xl-9" style="border-color: #131842; border-width: 3px;">
         </div>
     </div>
     <div class="row justify-content-center">
@@ -623,6 +647,8 @@
         © 2024 UM Technical Services. All rights reserved. <a href="https://www.umtechnicalservices.ae" class="text-light">Visit our website</a>
     </div>
 </footer> 
+
+
  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -643,7 +669,7 @@ function updateServiceText() {
 setInterval(updateServiceText, 2000); // Update service every 2 seconds
 document.addEventListener('DOMContentLoaded', function() {
             var carousel = new bootstrap.Carousel(document.getElementById('galleryCarousel'), {
-                interval: 5000,  // Set to 5 seconds
+                interval: 10000,  // Set to 5 seconds
                 pause: 'hover',  // Pause on hover
                 wrap: true,      // Continuous loop
                 keyboard: false  // Disable keyboard controls
@@ -767,7 +793,13 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-  
+   
         </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html> 

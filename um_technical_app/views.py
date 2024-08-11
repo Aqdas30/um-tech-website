@@ -4,6 +4,7 @@ from django.conf import settings
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
 from rest_framework import generics
+from rest_framework.response import Response
 
 from .forms import ContactForm
 from .models import Service
@@ -54,4 +55,4 @@ class ServiceListPreviewView(generics.ListAPIView):
     def list(self, request, *args, **kwargs):
         queryset = self.get_queryset()
         serializer = self.get_serializer(queryset, many=True, context={'request': request})
-        return response(serializer.data)
+        return Response(serializer.data)

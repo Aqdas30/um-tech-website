@@ -35,32 +35,35 @@
 .alert .text-white {
     color: #131842 !important; /* Ensure all text inside alert is blue */
 }
+@media (max-width: 400px) {
+    .phone-numbers {
+        white-space: nowrap; /* Prevent phone numbers from breaking into a new line */
+        font-size: 14px; /* Adjust font size for small screens */
+    }
 
-/* Navbar styles */
-.navbar {
-    background-color: #131842 !important; /* Set navbar background to blue */
-    color: white !important; /* White text color for navbar content */
+    .text-nowrap {
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+
+    .alert .container-fluid {
+        padding-left: 0;
+        padding-right: 0; /* Reduce padding for narrow screens */
+    }
+
+    .alert .contact-info {
+        font-size: 14px; /* Adjust text size */
+    }
+
+    .alert .text-white {
+        font-size: 14px; /* Adjust text size */
+    }
+
+    .alert {
+        padding: 5px; /* Reduce padding to fit more content */
+    }
 }
 
-.navbar .navbar-brand,
-.navbar .navbar-nav .nav-link {
-    color: white !important; /* Ensure brand and nav links are white */
-}
 
-.navbar .navbar-brand img {
-    max-height: 80px !important; /* Adjust logo size */
-    object-fit: contain !important; /* Ensure logo fits well */
-}
-
-.navbar .nav-link:hover,
-.navbar .dropdown-item:hover {
-    color: #cccccc !important; /* Lighter color on hover */
-}
-
-/* Override specific Bootstrap classes */
-.navbar.bg-light {
-    background-color: #131842 !important; /* Override Bootstrap bg-light class */
-}
 
 .text-white {
     color: white !important; /* Ensure white text where appropriate */
@@ -90,6 +93,50 @@
 }
 
 /* Navbar styles */
+.navbar { background-color: #131842 !important; color: white !important; }
+.offcanvas { background-color: #131842 !important; }
+.offcanvas-body .nav-link { color: white; }
+.offcanvas-body .nav-link:hover { color: #131842; }
+
+.navbar {
+    background-color: #131842 !important; /* Set navbar background to blue */
+    color: white !important; /* White text color for navbar content */
+}
+
+/* White hamburger icon on mobile */
+.navbar-toggler-icon-white {
+    fill: white;
+}
+
+/* Black text color for nav items on mobile */
+.offcanvas-body .nav-link {
+    color: black;
+}
+
+/* Change color on hover for better visibility */
+.offcanvas-body .nav-link:hover {
+    color: #131842; /* Darker blue */
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-nav .nav-link {
+    color: white !important; /* Ensure brand and nav links are white */
+}
+
+.navbar .navbar-brand img {
+    max-height: 80px !important; /* Adjust logo size */
+    object-fit: contain !important; /* Ensure logo fits well */
+}
+
+.navbar .nav-link:hover,
+.navbar .dropdown-item:hover {
+    color: #cccccc !important; /* Lighter color on hover */
+}
+
+/* Override specific Bootstrap classes */
+.navbar.bg-light {
+    background-color: #131842 !important; /* Override Bootstrap bg-light class */
+}
 .navbar {
     padding: 0.5rem 1rem !important;
     margin-bottom: 0 !important;
@@ -195,24 +242,82 @@
 
 /* Additional styles for feature boxes if needed */
 /* Ensure equal heights for feature boxes */
-.feature-box {
-    flex: 1; /* Ensures equal width distribution */
-    min-width: 200px; /* Ensures each box has a minimum width */
-    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-    height: 100%; /* Ensures all boxes have the same height */
-    border-radius: 8px; /* Optional: Add rounded corners */
+
+/* Ensure the container and its children are responsive */
+.container-fluid, .container {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box; /* Include padding and border in width calculation */
+
+}
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.choose-box {
+    background-color: #f8f9fa; /* Default background color */
+    padding: 1rem;
+    border: 1px solid #ddd; /* Optional: Border around the box */
+    border-radius: 5px; /* Optional: Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Shadow */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px; /* Adjust height as needed */
 }
 
-/* Optional: Add equal height to feature boxes for consistent appearance */
-.feature-box p {
-    margin-bottom: 0;
+.choose-box:hover {
+    background-color: #e0e0e0; /* Background color on hover */
+    transform: scale(1.05); /* Slightly enlarge the box */
+}
+
+.choose-box.active-feature {
+    /* Additional styles for active feature, if any */
+}
+/* Ensure proper use of grid system */
+
+@media (max-width: 992px) {
+    .feature-box {
+        flex: 1 1 45%; /* Adjust to fit two boxes in a row */
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 992px) {
+    .col-lg-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 
 
+
+@media (max-width: 768px) {
+    .feature-box {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+}
+
+@media (max-width: 360px) {
+    .feature-box {
+        padding: 5px; /* Further reduce padding if needed */
+    }
+}
 @media (max-width: 767px) {
     .feature-box {
         min-width: 150px; /* Adjust to fit mobile screens */
     }
+}
+* {
+    max-width: 100vw; /* Ensure elements do not exceed the viewport width */
+}
+
+html, body {
+    overflow-x: hidden;
 }
 
 
@@ -288,7 +393,7 @@ body, p, span{
   .why-choose-us .ct-btn a{
     color: #1358a2;
   }
-  .why-choose-us .feature-box {
+  .why-choose-us .choose-box {
     background: #fff;
     padding: 30px;
     margin-bottom: 30px;
@@ -306,14 +411,14 @@ body, p, span{
     max-width: 100%;
     height: auto; /* Maintain aspect ratio */
 }
-.why-choose-us .feature-box:hover {
+.why-choose-us .choose-box:hover {
     transform: translateY(-10px);
 }
-.why-choose-us .feature-box:hover .fbc-btn {
+.why-choose-us .choose-box:hover .fbc-btn {
     background: #131842;
     color: #fff;
 }
-.why-choose-us .feature-box::before {
+.why-choose-us .choose-box::before {
     content: "";
     position: absolute;
     top: -115px;
@@ -345,13 +450,14 @@ body, p, span{
     position: relative;
 }
 
-.why-choose-us .feature-box h3 {
+.why-choose-us .choose-box h3 {
     margin-top: 15px; /* Adjust the margin if needed */
     margin-bottom: 10px; /* Adjust the margin if needed */
 }
 
-.why-choose-us .feature-box p {
+.why-choose-us .choose-box p {
     margin-top: 10px; /* Adjust the margin if needed */
+    color: black;
 }
 
   /* gallery */
@@ -377,8 +483,9 @@ body, p, span{
     right: 0;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
+    font-size: 10px;
 }
 .carousel-control-prev,
 .carousel-control-next {
@@ -448,20 +555,8 @@ transform: scale(1.05);
     align-items: center;
 }
 
-.feature-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem; /* Space between feature boxes */
-}
-
-.feature-column {
-    flex: 1;
-    min-width: 0; /* Ensures boxes shrink to fit smaller screens */
-}
-
 
 /* Service section */
-
 
 
 .service_section {
