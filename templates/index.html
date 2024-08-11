@@ -23,6 +23,8 @@
 <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/padding/padding.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <style>
         :root {
@@ -74,17 +76,8 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#home">Home</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#services" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Services
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item" href="#services">Plumbing</a></li>
-                                <li><a class="dropdown-item" href="#services">Painting</a></li>
-                                <li><a class="dropdown-item" href="#services">AC Service</a></li>
-                                <li><a class="dropdown-item" href="#services">Tiling</a></li>
-                                <li><a class="dropdown-item" href="#services">Carpentary</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#services">Services</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about">About</a>
@@ -656,7 +649,15 @@
     <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
-
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
 const services = ["CARPENTRY", "PLUMBING", "PAINTING", "TILING", "ELECTRICAL"];
 let currentIndex = 0;
 

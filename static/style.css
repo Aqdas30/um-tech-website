@@ -3,6 +3,9 @@
     
 } */
 /* Alert bar styles */
+
+
+
 .alert {
     background-color: white !important; /* Set alert bar background to white */
     color: #131842 !important; /* Blue color for text */
@@ -62,36 +65,6 @@
         padding: 5px; /* Reduce padding to fit more content */
     }
 }
-
-
-
-.text-white {
-    color: white !important; /* Ensure white text where appropriate */
-}
-
-.alert-content .contact-info div {
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-    color: #131842 !important; /* Blue color for contact info text */
-}
-
-.alert-content .buttons {
-    margin-left: auto !important;
-    color: #131842 !important; /* Blue color for buttons */
-}
-
-.alert-content .btn {
-    background-color: white !important; /* White background for buttons */
-    color: #131842 !important; /* Blue text for buttons */
-    border: 1px solid #131842 !important; /* Blue border for buttons */
-}
-
-.alert-content .btn:hover {
-    background-color: #131842 !important; /* Blue background on hover */
-    color: white !important; /* White text on hover */
-}
-
 /* Navbar styles */
 .navbar { background-color: #131842 !important; color: white !important; }
 .offcanvas { background-color: #131842 !important; }
@@ -195,6 +168,35 @@
     }
 }
 
+
+
+.text-white {
+    color: white !important; /* Ensure white text where appropriate */
+}
+
+.alert-content .contact-info div {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    color: #131842 !important; /* Blue color for contact info text */
+}
+
+.alert-content .buttons {
+    margin-left: auto !important;
+    color: #131842 !important; /* Blue color for buttons */
+}
+
+.alert-content .btn {
+    background-color: white !important; /* White background for buttons */
+    color: #131842 !important; /* Blue text for buttons */
+    border: 1px solid #131842 !important; /* Blue border for buttons */
+}
+
+.alert-content .btn:hover {
+    background-color: #131842 !important; /* Blue background on hover */
+    color: white !important; /* White text on hover */
+}
+
 /* Hero Section Styles */
 .hero-section {
     background-image: var(--hero-background-image);
@@ -204,6 +206,8 @@
     min-height: 80vh;
     display: flex;
     align-items: center;
+    background-attachment: fixed;
+
 }
 
 .hero-content {
