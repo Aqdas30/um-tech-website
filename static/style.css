@@ -4,6 +4,99 @@
 } */
 /* Alert bar styles */
 
+@import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
+
+.service-24 {
+  font-family: "Montserrat", sans-serif;
+  color: #8d97ad;
+  font-weight: 300;
+}
+
+.service-24 h1, .service-24 h2, .service-24 h3, .service-24 h4, .service-24 h5, .service-24 h6 {
+  color: #3e4555;
+}
+
+.service-24 p {
+  text-decoration: none !important; /* Remove underline from paragraphs */
+  color: black; /* Ensure color is black by default */
+}
+
+.service-24 .card.card-shadow {
+  -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+  box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+}
+
+.service-24 a {
+  text-decoration: none !important; /* Remove underline from all links */
+}
+
+.service-24 .card-hover:hover {
+  background: #131842;
+  background: -webkit-linear-gradient(legacy-direction(to right), #131842 0%, #1dc8cc 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#131842), to(#1dc8cc));
+  background: -webkit-linear-gradient(left, #131842 0%, #1dc8cc 100%);
+  background: -o-linear-gradient(left, #131842 0%, #1dc8cc 100%);
+  background: linear-gradient(to right, #131842 0%, #1dc8cc 100%);
+}
+
+.service-24 .card-hover:hover .bg-success-grediant {
+  color: #ffffff;
+  text-fill-color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+}
+
+.service-24 .card-hover:hover .ser-title {
+  color: #ffffff;
+}
+
+.service-24 .card-hover:hover p {
+  color: black !important; /* Ensure paragraph text remains black on hover */
+}
+
+.service-24 .bg-success-grediant {
+  background: #131842;
+  background: -webkit-linear-gradient(legacy-direction(to right), #131842 0%, #1dc8cc 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#131842), to(#1dc8cc));
+  background: -webkit-linear-gradient(left, #131842 0%, #1dc8cc 100%);
+  background: -o-linear-gradient(left, #131842 0%, #1dc8cc 100%);
+  background: linear-gradient(to right, #131842 0%, #1dc8cc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  font-size: 50px;
+}
+
+.service-24 .wrap-service-24 .card {
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  -webkit-transition: 0.3s ease-out;
+}
+
+.service-24 .wrap-service-24 .card:hover {
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+}
+
+.service-24 .btn-outline-success {
+  color: #131842 !important;
+  background-color: transparent;
+  border-color: #131842;
+  text-decoration: none !important; /* Ensure underline is removed from button text */
+}
+
+.service-24 .btn-outline-success:hover {
+  background: #131842;
+  border-color: #131842;
+  color: #ffffff !important;
+  text-decoration: none !important; /* Ensure underline is removed on hover */
+}
+
+.service-24 .btn-md {
+  padding: 15px 45px;
+  font-size: 16px;
+}
 
 .more-services {
     display: none;
@@ -158,99 +251,6 @@
 .alert-content .btn:hover {
     background-color: #131842 !important; /* Blue background on hover */
     color: white !important; /* White text on hover */
-}
-@import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
-
-.service-24 {
-  font-family: "Montserrat", sans-serif;
-  color: #8d97ad;
-  font-weight: 300;
-}
-
-.service-24 h1, .service-24 h2, .service-24 h3, .service-24 h4, .service-24 h5, .service-24 h6 {
-  color: #3e4555;
-}
-
-.service-24 p {
-  text-decoration: none !important; /* Remove underline from paragraphs */
-  color: black; /* Ensure color is black by default */
-}
-
-.service-24 .card.card-shadow {
-  -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
-  box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
-}
-
-.service-24 a {
-  text-decoration: none !important; /* Remove underline from all links */
-}
-
-.service-24 .card-hover:hover {
-  background: #131842;
-  background: -webkit-linear-gradient(legacy-direction(to right), #131842 0%, #1dc8cc 100%);
-  background: -webkit-gradient(linear, left top, right top, from(#131842), to(#1dc8cc));
-  background: -webkit-linear-gradient(left, #131842 0%, #1dc8cc 100%);
-  background: -o-linear-gradient(left, #131842 0%, #1dc8cc 100%);
-  background: linear-gradient(to right, #131842 0%, #1dc8cc 100%);
-}
-
-.service-24 .card-hover:hover .bg-success-grediant {
-  color: #ffffff;
-  text-fill-color: #ffffff;
-  -webkit-text-fill-color: #ffffff;
-}
-
-.service-24 .card-hover:hover .ser-title {
-  color: #ffffff;
-}
-
-.service-24 .card-hover:hover p {
-  color: black !important; /* Ensure paragraph text remains black on hover */
-}
-
-.service-24 .bg-success-grediant {
-  background: #131842;
-  background: -webkit-linear-gradient(legacy-direction(to right), #131842 0%, #1dc8cc 100%);
-  background: -webkit-gradient(linear, left top, right top, from(#131842), to(#1dc8cc));
-  background: -webkit-linear-gradient(left, #131842 0%, #1dc8cc 100%);
-  background: -o-linear-gradient(left, #131842 0%, #1dc8cc 100%);
-  background: linear-gradient(to right, #131842 0%, #1dc8cc 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  font-size: 50px;
-}
-
-.service-24 .wrap-service-24 .card {
-  -o-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-  -webkit-transition: 0.3s ease-out;
-}
-
-.service-24 .wrap-service-24 .card:hover {
-  -ms-transform: translateY(-10px);
-  transform: translateY(-10px);
-  -webkit-transform: translateY(-10px);
-}
-
-.service-24 .btn-outline-success {
-  color: #131842 !important;
-  background-color: transparent;
-  border-color: #131842;
-  text-decoration: none !important; /* Ensure underline is removed from button text */
-}
-
-.service-24 .btn-outline-success:hover {
-  background: #131842;
-  border-color: #131842;
-  color: #ffffff !important;
-  text-decoration: none !important; /* Ensure underline is removed on hover */
-}
-
-.service-24 .btn-md {
-  padding: 15px 45px;
-  font-size: 16px;
 }
 
 /* Hero Section Styles */
