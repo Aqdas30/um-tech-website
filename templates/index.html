@@ -6,6 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UM Technical Services</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+    integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK"
+    crossorigin="anonymous"
+  />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -55,7 +61,7 @@
             </div>
         </div>
     </div>
-    
+{% comment %}     
     <nav class="navbar navbar-expand-md bg-light bsb-navbar bsb-navbar-hover bsb-navbar-caret" id="home">
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -90,7 +96,59 @@
             </div>
         </div>
     </nav>
-    
+     {% endcomment %}
+
+
+    <!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navigation">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="{% static 'images/logo5.png' %}" alt="Logo" style="height: 70px;"> <!-- Adjust the height as needed -->
+      </a>
+      
+      <!-- Toggler button for mobile view -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link px-3 px-lg-2 active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 px-lg-2" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 px-lg-2" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 px-lg-2" href="#faq">FAQ</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link px-3 px-lg-2 dropdown-toggle" href="#services" id="servicesDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="#services">Painting</a></li>
+              <li><a class="dropdown-item" href="#services">Ac Service</a></li>
+              <li><a class="dropdown-item" href="#services">Carpentary</a></li>
+              <li><a class="dropdown-item" href="#services">Plumbing</a></li>
+              <li><a class="dropdown-item" href="#services">Tiling</a></li>
+
+
+              <!-- Add more services as needed -->
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar -->
+
+  
     <div class="hero-section">
         <div class="container">
             <div class="row justify-content-end">
@@ -151,8 +209,8 @@
             </div>
             <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center mb-4">
                 <div class="feature-box text-center p-4" style="background-color: #131842; color: white; padding-left: 20px; padding-right: 20px;">
-                    <div class="service-number" style="color: white;">2</div>
-                    <h3>Improve</h3>
+                    <div class="service-number" style="color: white !important;">2</div>
+                    <h3 style="color: white;">Improve</h3>
                     <p style="color: white;">Expert solutions to enhance your home's functionality.</p>
                 </div>
             </div>
@@ -775,6 +833,17 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
+</script>
+<script
+src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"
+integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD"
+crossorigin="anonymous"
+></script>
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<script src="{% static 'js/swiped-events.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>

@@ -68,110 +68,70 @@
         padding: 5px; /* Reduce padding to fit more content */
     }
 }
-/* Navbar styles */
-.navbar { background-color: #131842 !important; color: white !important; }
-.offcanvas { background-color: #131842 !important; }
-.offcanvas-body .nav-link { color: white; }
-.offcanvas-body .nav-link:hover { color: #131842; }
-
-.navbar {
-    background-color: #131842 !important; /* Set navbar background to blue */
-    color: white !important; /* White text color for navbar content */
-}
-
-/* White hamburger icon on mobile */
-.navbar-toggler-icon-white {
-    fill: white;
-}
-
-/* Black text color for nav items on mobile */
-.offcanvas-body .nav-link {
-    color: black;
-}
-
-/* Change color on hover for better visibility */
-.offcanvas-body .nav-link:hover {
-    color: #131842; /* Darker blue */
-}
-
-.navbar .navbar-brand,
-.navbar .navbar-nav .nav-link {
-    color: white !important; /* Ensure brand and nav links are white */
-}
-
-.navbar .navbar-brand img {
-    max-height: 80px !important; /* Adjust logo size */
-    object-fit: contain !important; /* Ensure logo fits well */
-}
-
-.navbar .nav-link:hover,
-.navbar .dropdown-item:hover {
-    color: #cccccc !important; /* Lighter color on hover */
-}
-
-/* Override specific Bootstrap classes */
-.navbar.bg-light {
-    background-color: #131842 !important; /* Override Bootstrap bg-light class */
-}
-.navbar {
-    padding: 0.5rem 1rem !important;
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-    background-color: #131842 !important; /* Set navbar background to blue */
-    color: white !important; /* White text color for navbar content */
-}
-
-.navbar-brand {
-    display: flex !important;
-    align-items: center !important;
-    padding: 0 !important;
-    max-width: 30% !important; /* Limit logo width to prevent navbar distortion */
-    color: white !important; /* Ensure the brand text/logo is white */
-}
-
+/* Increase logo size */
 .navbar-brand img {
-    width: 100% !important; /* Make image responsive within its container */
-    height: auto !important; /* Maintain aspect ratio */
-    max-height: 80px !important; /* Prevent excessive height */
-    object-fit: contain !important; /* Ensure the entire logo is visible */
-}
-
-.navbar-expand-md .navbar-nav {
-    flex-grow: 1 !important;
-    justify-content: flex-end !important;
-}
-
-.navbar-nav {
-    flex-wrap: nowrap !important;
-    color: white !important; /* White text color for navbar items */
-}
-
-.navbar-nav .nav-link {
-    color: white !important; /* Ensure the navbar links are white */
-}
-
-.navbar-nav .nav-link:hover {
-    color: #cccccc !important; /* Optional: Lighter color on hover */
-}
-
-/* Responsive adjustments */
-@media (max-width: 991.98px) {
-    .navbar-brand {
-        max-width: 50% !important; /* Allow logo to be slightly larger on smaller screens */
+    height: 50px; /* Adjust the height as needed */
+  }
+  
+  /* Navbar color */
+  .navbar {
+    background-color: #131842; /* Dark blue color */
+  }
+  
+  /* Ensure the sidebar and overlay work as expected */
+  .sidebar,
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+  
+  .sidebar {
+    left: -100%;
+    max-width: 300px;
+    transition: all ease 0.25s;
+    overflow-y: auto;
+    z-index: 1032;
+  }
+  
+  .overlay {
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    visibility: hidden;
+    z-index: 1031;
+  }
+  
+  .main-navigation.active .sidebar {
+    left: 0;
+  }
+  
+  .main-navigation.active .overlay {
+    visibility: visible;
+  }
+  
+  @media (min-width: 992px) {
+    .sidebar {
+      position: relative;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      flex-direction: row;
+      max-width: 100%;
+      transform: none;
+      transition: none;
+      overflow-y: visible;
+      z-index: auto;
     }
-    
-    .navbar-toggler {
-        margin-left: auto !important; /* Push toggler to the right */
-    }
-}
-
-@media (max-width: 767.98px) {
-    .navbar-brand img {
-        max-height: 60px !important; /* Further reduce max height on very small screens */
-    }
-}
-
-
+  }
+  
+  .main-heading {
+    position: relative;
+    z-index: 100;
+  }
+  
 
 .text-white {
     color: white !important; /* Ensure white text where appropriate */
@@ -209,7 +169,6 @@
     min-height: 80vh;
     display: flex;
     align-items: center;
-    background-attachment: fixed;
 
 }
 
