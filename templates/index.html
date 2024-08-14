@@ -187,7 +187,6 @@
                     <li class="nav-item">
                         <a class="nav-link px-3 px-lg-2" href="#faq">FAQ</a>
                     </li>
-                    
                 </ul>
             </div>
         </div>
@@ -1138,6 +1137,30 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleStickyNavbar();
         };
     });
+    document.addEventListener("DOMContentLoaded", function() {
+    // Existing code...
+
+    // Add this new code
+    var navbarToggler = document.querySelector('.navbar-toggler');
+    var navbarCollapse = document.querySelector('.navbar-collapse');
+    var closeNavBtn = document.querySelector('.close-nav-btn');
+
+    navbarToggler.addEventListener('click', function() {
+        navbarCollapse.classList.add('show');
+    });
+
+    closeNavBtn.addEventListener('click', function() {
+        navbarCollapse.classList.remove('show');
+    });
+
+    // Close the navbar when clicking outside
+    document.addEventListener('click', function(event) {
+        var isClickInside = navbarCollapse.contains(event.target) || navbarToggler.contains(event.target);
+        if (!isClickInside && navbarCollapse.classList.contains('show')) {
+            navbarCollapse.classList.remove('show');
+        }
+    });
+});
 </script>
 
 <script>
@@ -1157,54 +1180,54 @@ el.appendChild(cloneChild.children[0])
 next = next.nextElementSibling
 }
 })
-    document.addEventListener('DOMContentLoaded', function() {
-        const mainNavigation = document.querySelector(".main-navigation");
-        const navbarCollapse = document.getElementById("navbarNav");
-        const toggler = mainNavigation.querySelector(".navbar-toggler");
-        const closeBtn = mainNavigation.querySelector(".close-nav-btn");
-        const dropdownToggles = mainNavigation.querySelectorAll('.dropdown-toggle');
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     const mainNavigation = document.querySelector(".main-navigation");
+    //     const navbarCollapse = document.getElementById("navbarNav");
+    //     const toggler = mainNavigation.querySelector(".navbar-toggler");
+    //     const closeBtn = mainNavigation.querySelector(".close-nav-btn");
+    //     const dropdownToggles = mainNavigation.querySelectorAll('.dropdown-toggle');
     
-        function openSideNav() {
-            navbarCollapse.classList.add("show");
-        }
+    //     function openSideNav() {
+    //         navbarCollapse.classList.add("show");
+    //     }
     
-        function closeSideNav() {
-            navbarCollapse.classList.remove("show");
-        }
+    //     function closeSideNav() {
+    //         navbarCollapse.classList.remove("show");
+    //     }
     
-        toggler.addEventListener("click", openSideNav);
-        closeBtn.addEventListener("click", closeSideNav);
+    //     toggler.addEventListener("click", openSideNav);
+    //     closeBtn.addEventListener("click", closeSideNav);
     
-        // Close nav when clicking outside
-        document.addEventListener('click', (event) => {
-            const isClickInside = mainNavigation.contains(event.target);
-            if (!isClickInside && navbarCollapse.classList.contains('show')) {
-                closeSideNav();
-            }
-        });
+    //     // Close nav when clicking outside
+    //     document.addEventListener('click', (event) => {
+    //         const isClickInside = mainNavigation.contains(event.target);
+    //         if (!isClickInside && navbarCollapse.classList.contains('show')) {
+    //             closeSideNav();
+    //         }
+    //     });
     
-        // Close nav when clicking on a link
-        const navLinks = mainNavigation.querySelectorAll('.nav-link:not(.dropdown-toggle)');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth < 992) {
-                    closeSideNav();
-                }
-            });
-        });
+    //     // Close nav when clicking on a link
+    //     const navLinks = mainNavigation.querySelectorAll('.nav-link:not(.dropdown-toggle)');
+    //     navLinks.forEach(link => {
+    //         link.addEventListener('click', () => {
+    //             if (window.innerWidth < 992) {
+    //                 closeSideNav();
+    //             }
+    //         });
+    //     });
     
-        // Toggle dropdown on click (for mobile)
-        dropdownToggles.forEach(toggle => {
-            toggle.addEventListener('click', (event) => {
-                if (window.innerWidth < 992) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                    const dropdownMenu = toggle.nextElementSibling;
-                    dropdownMenu.classList.toggle('show');
-                }
-            });
-        });
-    });
+    //     // Toggle dropdown on click (for mobile)
+    //     dropdownToggles.forEach(toggle => {
+    //         toggle.addEventListener('click', (event) => {
+    //             if (window.innerWidth < 992) {
+    //                 event.preventDefault();
+    //                 event.stopPropagation();
+    //                 const dropdownMenu = toggle.nextElementSibling;
+    //                 dropdownMenu.classList.toggle('show');
+    //             }
+    //         });
+    //     });
+    // });
     </script>
      <script type="text/javascript" src=
      "https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
