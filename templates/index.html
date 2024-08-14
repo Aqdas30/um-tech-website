@@ -6,32 +6,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UM Technical Services</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet">
-
+    
+    <!-- Bootstrap CSS (Use the latest version) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/navbars/navbar-1/assets/css/navbar-1.css">
+    
+    <!-- MDB UI Kit (If needed) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome CSS (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    
+    <!-- Bootstrap Icons (for Bootstrap-specific icons) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="stylesheet" href="{% static 'features.css' %}">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/bsb-btn-size/bsb-btn-size.css">
-<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/margin/margin.css">
-<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/padding/padding.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
+    
+    <!-- Google Fonts (Optional, depending on your design) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --hero-background-image: url('{% static "images/blueboy.jpeg" %}');
@@ -157,7 +151,6 @@
     </div>
 
     <!-- Alert with Contact Info -->
-    
     <nav class="navbar navbar-expand-lg navbar-dark main-navigation">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -169,18 +162,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <button type="button" class="btn-close btn-close-white d-lg-none close-nav-btn" aria-label="Close navigation"></button>
                 
-                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link px-3 px-lg-2 active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-3 px-lg-2" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-3 px-lg-2" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-3 px-lg-2" href="#faq">FAQ</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link px-3 px-lg-2 dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -194,11 +178,21 @@
                             <li><a class="dropdown-item" href="#services">Tiling</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 px-lg-2" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 px-lg-2" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 px-lg-2" href="#faq">FAQ</a>
+                    </li>
+                    
                 </ul>
             </div>
         </div>
     </nav>
-
+    
 
     
     <div class="hero-section">
@@ -614,75 +608,7 @@
                 <hr class="w-50 mx-auto mb-5 mb-xl-9" style="border-color: #131842;">
             </div>
         </div>
-        <!-- <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="gallery-item">
-                                <img src="{% static 'images/Ac service.jpg' %}" alt="AC Installation">
-                                <div class="gallery-caption">
-                                    <h5>AC Installation</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="gallery-item">
-                                <img src="{% static 'images/tiling.jpg' %}" alt="Commercial Services">
-                                <div class="gallery-caption">
-                                    <h5>Tiling Services</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="gallery-item">
-                                <img src="{% static 'images/painting.jpg' %}" alt="Residential Services">
-                                <div class="gallery-caption">
-                                    <h5>Painting Services</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="gallery-item">
-                                <img src="{% static 'images/electrical.jpg' %}" alt="Electrical">
-                                <div class="gallery-caption">
-                                    <h5>Electrical</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="gallery-item">
-                                <img src="{% static 'images/plumbing.jpg' %}" alt="Plumbing">
-                                <div class="gallery-caption">
-                                    <h5>Plumbing</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="gallery-item">
-                                <img src="{% static 'images/carpentary.jpg' %}" alt="Carpentry">
-                                <div class="gallery-caption">
-                                    <h5>Carpentry</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div> -->
-    <!-- Carousel wrapper -->
+     
     <div class="container text-center my-3">
 		<div class="row mx-auto my-auto justify-content-center">
 			<div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -748,7 +674,6 @@
 			</div>
 		</div>		
 	</div>
-<!-- Carousel wrapper -->
  
     
     
@@ -756,7 +681,6 @@
     </div>
 
 
-    <!-- {% static 'images/painting.jpg' %} -->
 
 
  <!-- FAQ Section -->
@@ -821,8 +745,6 @@
   </section>
   
   <!--Section: FAQ-->
-
-  {% comment %} contact us  {% endcomment %}
   <div class="container-fluid  px-5  mx-auto" style="max-width: 1200px;" id="contact">
     <div class="row justify-content-md-center">
         <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 text-center mx-auto">
@@ -854,7 +776,6 @@
         </div>
         
         <!-- Right Section (Form) -->
-
         <div class="col">
             <form id="contactForm" method="post" class="bg-light p-4 rounded">
                 {% csrf_token %}
@@ -886,9 +807,10 @@
                 <button type="submit" class="btn btn-dark-blue" style="background-color: #131842; color: white;">BOOK</button>
             </form>
             
-            <div id="successMessage" class="alert alert-success mt-3 border border-success" style="display: none;"></div>
+            <div id="successMessage" class="alert alert-success mt-3" style="display: none; border: 2px solid green !important; padding: 15px !important; border-radius: 5px !important;">
+                Thank you. Your request for the <span id="requestedService"></span> service has been received. Our team will contact you shortly.
+            </div>
         </div>
-    
     </div>
 </div>
 <br>
@@ -940,13 +862,50 @@
     </div>
 </footer>
 
-
-
- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var form = document.getElementById('contactForm');
+    
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+    
+                var formData = new FormData(form);
+    
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRFToken': form.querySelector('[name=csrfmiddlewaretoken]').value
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    var successMessage = document.getElementById('successMessage');
+                    var requestedService = document.getElementById('requestedService');
+    
+                    if (data.status === 'success') {
+                        // Set success message text
+                        requestedService.textContent = data.message.split(' ').slice(-2, -1).join(' '); // Extract the service type
+                        successMessage.textContent = data.message;
+                        successMessage.style.display = 'block';
+                        form.reset(); // Reset form fields
+                    } else {
+                        console.log('Form submission error:', data.errors);
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            });
+        });
+    </script>
+    
+    
+    
     
     <script>
     
@@ -1182,6 +1141,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <script>
+    
 let items = document.querySelectorAll('.carousel .carousel-item')
 
 items.forEach((el) => {
@@ -1254,5 +1214,6 @@ next = next.nextElementSibling
          <script type="text/javascript"
              src=
      "https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+     
 </body>
 </html> 

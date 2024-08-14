@@ -25,7 +25,7 @@ def index(request):
 
             send_mail(
                 subject=f'Contact Form Submission from {name}',
-                message=f'Phone Number: {phone_number}\nEmail: {email}\nService Type: {service_type}\nMessage: {message}',
+                message=f'Phone Number: {phone_number}\nEmail: {email}\nService Type: {service_name}\nMessage: {message}',
                 from_email=email,
                 recipient_list=[settings.CONTACT_EMAIL],
                 fail_silently=False,
@@ -41,6 +41,7 @@ def index(request):
         form = ContactForm()
 
     return render(request, 'index.html', {'form': form})
+
 
 class ServiceListView(generics.ListAPIView):
     queryset = Service.objects.all()
