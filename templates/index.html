@@ -135,8 +135,9 @@
     </style>
 </head>
 <body> 
-    <!-- Alert with Contact Info -->
-    <div class="alert d-flex align-items-center mb-0" role="alert" style="background-color: #131842;">
+
+
+    <div class="alert d-flex align-items-center mb-0 position-relative" style="z-index: 1031;" role="alert">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-md-12 d-flex justify-content-center justify-content-lg-start mb-2 mb-lg-0">
@@ -155,16 +156,16 @@
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navigation">
+    <!-- Alert with Contact Info -->
+    
+    <nav class="navbar navbar-expand-lg navbar-dark main-navigation">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="{% static 'images/logo5.png' %}" alt="Logo" style="height: 70px;">
             </a>
-            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
             <div class="collapse navbar-collapse" id="navbarNav">
                 <button type="button" class="btn-close btn-close-white d-lg-none close-nav-btn" aria-label="Close navigation"></button>
                 
@@ -197,6 +198,9 @@
             </div>
         </div>
     </nav>
+
+
+    
     <div class="hero-section">
         <div class="container">
             <div class="row justify-content-end">
@@ -1153,6 +1157,30 @@ document.addEventListener('DOMContentLoaded', function() {
    
    }(window, document));
    </script>
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the navbar element
+        var navbar = document.querySelector('.navbar');
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function toggleStickyNavbar() {
+            if (window.pageYOffset > sticky) {
+                navbar.classList.add("fixed-top");
+            } else {
+                navbar.classList.remove("fixed-top");
+            }
+        }
+
+        // When the user scrolls the page, execute the function
+        window.onscroll = function() {
+            toggleStickyNavbar();
+        };
+    });
+</script>
+
 <script>
 let items = document.querySelectorAll('.carousel .carousel-item')
 

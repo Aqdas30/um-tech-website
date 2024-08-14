@@ -68,6 +68,20 @@
         padding: 5px; /* Reduce padding to fit more content */
     }
 }
+/* Initial non-fixed state */
+.navbar {
+    transition: top 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Fixed state when scrolled */
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
 /* Increase logo size */
 .navbar-brand img {
     height: 50px; /* Adjust the height as needed */
